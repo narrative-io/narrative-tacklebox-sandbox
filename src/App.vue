@@ -23,4 +23,5 @@ export default {
 
 #app 
 	font-family: "Euclid Circular A"
+	padding: 40px
 </style>

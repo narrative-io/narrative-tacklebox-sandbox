@@ -61,27 +61,35 @@ export default {
   display: flex
   flex-direction: column
   align-items: center
-  margin: 60px auto
   .logo
     margin-bottom: 96px
     width: 200px
   h1
     margin-bottom: 24px
+  p
+    text-align: center
   .tiles
     display: flex
-    justify-content: space-around
-    width: 800px
+    justify-content: space-between
+    max-width: 800px
+    margin: 96px auto
+    @media (max-width: 725px)
+      flex-direction: column
+      align-items: center
     .tile
       width: 200px  
       display: flex
       flex-direction: column
-      align-items: center
-      margin: 96px auto
+      align-items: center     
       .nio-icon-framer
         margin-bottom: 24px
       h2, p 
         text-align: center
       h2
         margin-bottom: 16px
-  
+    & > .tile + .tile
+      @media (min-width: 726px)
+        margin-left: 20px
+      @media (max-width: 725px)
+        margin-top: 64px
 </style>
